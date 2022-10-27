@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/pandora/static/css/main.74d0500c.css",
-    "main.js": "/pandora/static/js/main.d9ea0b57.js",
+    "main.js": "/pandora/static/js/main.a920106c.js",
     "static/js/787.03a6315d.chunk.js": "/pandora/static/js/787.03a6315d.chunk.js",
     "static/media/fondo-slime.jpg": "/pandora/static/media/fondo-slime.0bb84a38cd4a9a75d596.jpg",
     "static/media/diamante1.gif": "/pandora/static/media/diamante1.fa2ec2c640cef870f5e5.gif",
     "index.html": "/pandora/index.html",
     "static/media/bag.svg": "/pandora/static/media/bag.9715b7a4f7df94b4560b3623cdb75978.svg",
     "main.74d0500c.css.map": "/pandora/static/css/main.74d0500c.css.map",
-    "main.d9ea0b57.js.map": "/pandora/static/js/main.d9ea0b57.js.map",
+    "main.a920106c.js.map": "/pandora/static/js/main.a920106c.js.map",
     "787.03a6315d.chunk.js.map": "/pandora/static/js/787.03a6315d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74d0500c.css",
-    "static/js/main.d9ea0b57.js"
+    "static/js/main.a920106c.js"
   ]
 }
