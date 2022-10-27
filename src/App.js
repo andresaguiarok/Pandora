@@ -6,11 +6,11 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <ItemListContainer greeting = {"Bienvenido a Pandora"} />
       <Footer />
-    </div>
+    </>
   );
 }
 
