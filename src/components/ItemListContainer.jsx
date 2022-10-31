@@ -2,16 +2,21 @@ import React from "react";
 import "./styles/itemlist.css";
 import Diamante from "../images/diamante1.gif";
 import Fondo from "../images/fondo-slime.jpg";
+import { Container } from "react-bootstrap";
 
-export default function ItemListContainer({greeting}){
+
+function ItemListContainer ({greeting}){
+
     return (
-        <div className="container-fluid" style={{
-            backgroundImage: `url(${Fondo})`, backgroundSize: "cover", height:"70vw", color: "white",}}>
+        <Container fluid className="p-1" style={{
+            backgroundImage: `url(${Fondo})`, backgroundSize: "cover", color: "white",}}>
             <div className="text-center">
-                <div className="container h1" style={{background: "rgba(0, 0, 0, 0.418)"}}>{greeting}</div>
-            <img src={Diamante} alt="diamante" className="img-fluid" />
-            <h1>En proceso...</h1>
+                <div className="h2" style={{background: "rgba(0, 0, 0, 0.418)", height:"40%" }}>{greeting}</div>
+                <img src={Diamante} alt="diamante" className="img-fluid" />
+                <h1 style={{color:"black"}}>En proceso..</h1>    
             </div>
-        </div>
+        </Container>
     );
 }
+
+export default ItemListContainer;
