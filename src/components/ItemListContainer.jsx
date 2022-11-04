@@ -3,17 +3,32 @@ import "./styles/itemlist.css";
 import Diamante from "../images/diamante1.gif";
 import Fondo from "../images/fondo-slime.jpg";
 import { Container } from "react-bootstrap";
-
+import ItemCount from "./ItemCount";
+import ItemList from "./ItemList";
 
 function ItemListContainer ({greeting}){
 
+    const onAdd = (cantidad) => {
+        console.log(`Se agrego ${cantidad}`);
+    }
+
     return (
         <Container fluid className="p-1" style={{
-            backgroundImage: `url(${Fondo})`, backgroundSize: "cover", color: "white",}}>
+            backgroundImage: `url(${Fondo})`, 
+            backgroundSize: "cover", 
+            color: "white",}}>
+
             <div className="text-center">
-                <div className="h2" style={{background: "rgba(0, 0, 0, 0.418)", height:"40%" }}>{greeting}</div>
+                <div className="h2" style={{
+                    background: "rgba(0, 0, 0, 0.418)", 
+                    height:"40%" }}>{greeting}
+                </div>
+
                 <img src={Diamante} alt="diamante" className="img-fluid" />
-                <h1 style={{color:"black"}}>En proceso..</h1>    
+                <h1 style={{color:"black"}}>En proceso..</h1>
+
+                <ItemCount initial={1} stock={5} onAdd={onAdd} />  
+                <ItemList />  
             </div>
         </Container>
     );

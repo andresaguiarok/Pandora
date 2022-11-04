@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function CarWidget () {
-    return(
+export default function CarWidget() {
+    return (
         <div>
             <button className="btn">
                 <i className="bi bi-bag-fill">
