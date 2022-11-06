@@ -1,34 +1,40 @@
 import React from "react";
-import "./styles/itemlist.css";
-import Diamante from "../images/diamante1.gif";
-import Fondo from "../images/fondo-slime.jpg";
+import Fondo from "../images/fondo-slime1.jpg";
 import { Container } from "react-bootstrap";
-import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
+import { useState, useEffect } from "react";
+import {listaProductos} from "./data.js";
 
-function ItemListContainer ({greeting}){
+function ItemListContainer (){
 
-    const onAdd = (cantidad) => {
-        console.log(`Se agrego ${cantidad}`);
-    }
+    const [prod, setProd] = useState([]);
+
+    useEffect(() => {
+        let dateList = new Promise((res, rej) => {    
+            setTimeout(() => {
+                res(listaProductos)
+            }, 3000);
+        })
+
+        dateList.then((res) => {
+            setProd(res)
+        })
+        .catch((e) =>{
+            console.log("Error!!");
+        })
+        .finally(() => {
+            console.log("Proceso exitoso");
+        })
+   }, []) 
 
     return (
         <Container fluid className="p-1" style={{
             backgroundImage: `url(${Fondo})`, 
-            backgroundSize: "cover", 
-            color: "white",}}>
+            backgroundSize: "cover",
+            color: "white"}}>
 
             <div className="text-center">
-                <div className="h2" style={{
-                    background: "rgba(0, 0, 0, 0.418)", 
-                    height:"40%" }}>{greeting}
-                </div>
-
-                <img src={Diamante} alt="diamante" className="img-fluid" />
-                <h1 style={{color:"black"}}>En proceso..</h1>
-
-                <ItemCount initial={1} stock={5} onAdd={onAdd} />  
-                <ItemList />  
+                <ItemList items={prod} />  
             </div>
         </Container>
     );

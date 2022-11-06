@@ -1,22 +1,17 @@
-import React from "react";
-import Card from 'react-bootstrap/Card';
+import React from 'react'
+import { Card } from 'react-bootstrap'
 
-function Item () {
-    return(
-        <div>
-            <Card style={{ width: '18rem' }}>
-                <Card.Header>Categoria</Card.Header>
-                <Card.Img variant="top" src="../images/pandora.png" />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text style={{color:"black"}}>
-                      Some quick example text to build on the card title and make up the
-                      bulk of the card's content.
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        </div>
-    )
+export default function Item({ producto }) {
+  return (
+    <div style={{margin:"20px"}}>
+    <Card style={{ width: '20rem', color:"black"}}>
+        <Card.Header> {`${producto.accesorio} de ${producto.categoria}`} </Card.Header>
+        <Card.Img src= {producto.img} style={{height:"300px"}} />
+        <Card.Body>
+            <Card.Title> {producto.nombre} </Card.Title>
+            <Card.Text>$ {producto.precio} </Card.Text>
+        </Card.Body>
+    </Card>
+    </div>
+  )
 }
-
-export default Item;
