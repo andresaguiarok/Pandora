@@ -2,20 +2,20 @@ import React from "react";
 import Item from "./Item";
 import Spinner from 'react-bootstrap/Spinner';
 import "./styles/contenedor.css";
+import { Container } from "react-bootstrap";
 
 function ItemList ({ items }) {
     
     return (
-        <div >
+        <Container >
             
             {!items.length && 
             <div className="contenedorLoad">
-                <Spinner animation="grow" variant="danger" className="load" />
-                <Spinner animation="grow" variant="danger" className="load" />
+                <Spinner animation="border" variant="secondary" className="load" />
             </div>}
 
-            <div className="contenedorCard ">
-            {items.map((item) =>{             
+            <div className="contenedorCard">
+            {items.map((item) => {             
                 return (
                     <div key={item.id}>
                         <Item producto={item} />
@@ -24,7 +24,7 @@ function ItemList ({ items }) {
             })}
             </div>
             
-        </div>
+        </Container>
     );
 }
 

@@ -7,6 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 import Logo from "../images/pandora.png";
 import CarWidget from "./CarWidget";
+import {Link} from "react-router-dom";
 import "./styles/navbar.css";
 
 function Navegador() {
@@ -14,18 +15,18 @@ function Navegador() {
     <Navbar expand="lg" variant="dark" style={{backgroundColor: "#0b0b0b"}} >
       <Container fluid>
         <Navbar.Brand>
-          <img src={Logo} alt="Logo del site" className="logo" />
+          <Link to={`/`}><img src={Logo} alt="Logo del site" className="logo" /></Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end text-center">
+        <Navbar.Collapse className="justify-content-end text-center">
           <Nav>
-            <Nav.Link href="#inicio">Inicio</Nav.Link>
-            <Nav.Link href="#tienda">Tienda</Nav.Link>
-            <Nav.Link href="#contacto">Contacto</Nav.Link>
+            <Link className="nav-link" to={`/`}>Inicio</Link>
+            <Link className="nav-link" to={`/contacto`}>Contacto</Link>
             <NavDropdown title="Categoria" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#oro">Oro</NavDropdown.Item>
-              <NavDropdown.Item href="#plata">Plata</NavDropdown.Item>
-              <NavDropdown.Item href="#acero">Acero</NavDropdown.Item>
+              <Link className="nav-item dropdown dropdown-item" to={`/categoria/Anillo`}>Anillos</Link>  
+              <Link className="nav-item dropdown dropdown-item" to={`/categoria/Aros`}>Aros</Link>
+              <Link className="nav-item dropdown dropdown-item" to={`/categoria/Pulsera`}>Pulseras</Link>
+              <Link className="nav-item dropdown dropdown-item" to={`/categoria/Cadena`}>Cadenas</Link>
             </NavDropdown>
             <CarWidget />
           </Nav>
