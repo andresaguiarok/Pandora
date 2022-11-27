@@ -13,12 +13,12 @@ function ItemCount ({ initial, stock, onAdd }) {
 
 
     return (
-        <div>
+        <div style={{display:"flex" , flexDirection:"row", justifyContent:"space-between", justifyItem:"center"}}>
             <button className="btn btn-outline-success" onClick={sumar} disabled={count >= stock}> + </button>
-            <div style={{color:"black", widht:"20vw"}}> {count} </div>
+            <div className="h3" style={{color:"black", width:"40px", height:"20px"}}> {count} </div>
             <button className="btn btn-outline-danger" onClick={resta} disabled={count <= 1} > - </button>
             <div>
-                <button className="btn btn-primary" onClick={()=> onAdd(count)} disabled={stock = 0} >Agregar</button>
+                <button className="btn btn-dark" onClick={()=> onAdd(count < stock)} disabled={stock = 0} >Agregar</button>
             </div>
         </div>
     );
