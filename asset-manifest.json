@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "//static/css/main.9233fc66.css",
-    "main.js": "//static/js/main.b55a6c96.js",
-    "static/js/787.03a6315d.chunk.js": "//static/js/787.03a6315d.chunk.js",
-    "static/media/fondo-slime1.jpg": "//static/media/fondo-slime1.caa4bd8c97fdd3e5feb8.jpg",
-    "index.html": "//index.html",
-    "main.9233fc66.css.map": "//static/css/main.9233fc66.css.map",
-    "main.b55a6c96.js.map": "//static/js/main.b55a6c96.js.map",
-    "787.03a6315d.chunk.js.map": "//static/js/787.03a6315d.chunk.js.map"
+    "main.css": "/pandora/static/css/main.9233fc66.css",
+    "main.js": "/pandora/static/js/main.0dcc3d95.js",
+    "static/js/787.03a6315d.chunk.js": "/pandora/static/js/787.03a6315d.chunk.js",
+    "static/media/fondo-slime1.jpg": "/pandora/static/media/fondo-slime1.caa4bd8c97fdd3e5feb8.jpg",
+    "index.html": "/pandora/index.html",
+    "main.9233fc66.css.map": "/pandora/static/css/main.9233fc66.css.map",
+    "main.0dcc3d95.js.map": "/pandora/static/js/main.0dcc3d95.js.map",
+    "787.03a6315d.chunk.js.map": "/pandora/static/js/787.03a6315d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9233fc66.css",
-    "static/js/main.b55a6c96.js"
+    "static/js/main.0dcc3d95.js"
   ]
 }
