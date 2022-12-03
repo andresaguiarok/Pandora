@@ -1,3 +1,8 @@
 .contenedorTodo {
     min-height: 500px;
+    background-color: rgba(0, 0, 0, 0.055);
+};
+
+.tablaBorder{
+    border-radius: 30px;
 }

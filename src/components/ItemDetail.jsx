@@ -8,15 +8,23 @@ import { Link } from 'react-router-dom';
 import { cartContext } from "./CartContext";
 import ItemCount from "./ItemCount.jsx";
 import "./styles/contenedor.css";
+import Swal from "sweetalert2";
 
 export default  function ItemDetail({ producto }) {
   const [bolsa, setBolsa] = useState(false);
 
   const {carrito, addItem} = useContext(cartContext);
   console.log(carrito);
-
   const onAdd  = (cantidad) => {
-    console.log(`se agrego ${cantidad} unidades de ${producto.nombre} `);
+    Swal.fire({
+      position: 'top',
+      width: "25rem",
+      icon: 'success',
+      title: `Se agrego ${producto.nombre} a la compra`,
+      showConfirmButton: false,
+      timerProgressBar: true ,
+      timer: 1500
+    })
     addItem(producto, cantidad)
     setBolsa(true)
   }
@@ -68,8 +76,8 @@ export default  function ItemDetail({ producto }) {
                 <Card.Body>
                   {bolsa 
                   ? <div className="contenedorDireccion">
-                    <Link className="btn btn-dark" to="/Cart" >Terminar compra</Link>
-                    <Link className="btn btn-info text-white" to="/">Seguir comprando</Link>
+                    <Link className="btn btn-dark p-1" to="/Cart" >Terminar compra</Link>
+                    <Link className="btn btn-info text-white p-1" to="/">Seguir comprando</Link>
                   </div>
                   : <ItemCount initial={1} stock={producto.stock} onAdd={onAdd} /> }
                 </Card.Body>

@@ -24,8 +24,8 @@ function Navegador() {
           <Link to={`/`}><img src={Logo} alt="Logo del site" className="logo" /></Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="justify-content-end text-center">
-          <Nav>
+        <Navbar.Collapse className="justify-content-end">
+          <Nav className="justify-content-end">
             <Link className="nav-link" to={`/`}>Inicio</Link>
             <NavDropdown title="Categoria" id="basic-nav-dropdown">
               <Link className="nav-item dropdown dropdown-item" to={`/categoria/Anillo`}>Anillos</Link>  
@@ -33,8 +33,7 @@ function Navegador() {
               <Link className="nav-item dropdown dropdown-item" to={`/categoria/Pulsera`}>Pulseras</Link>
               <Link className="nav-item dropdown dropdown-item" to={`/categoria/Cadena`}>Cadenas</Link>
             </NavDropdown>
-            <Link className="nav-link" to={`/contacto`}>Contacto</Link>
-            <Link className="nav-item dropdown dropdown-item" to={`Cart`} ><CarWidget cantidad={cantidad}/></Link>
+            <Link className="nav-item dropdown-item" to={`Cart`} ><CarWidget cantidad={cantidad}/></Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

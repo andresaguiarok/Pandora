@@ -1,4 +1,5 @@
-import React, { useState, createContext } from 'react';
+import React, { createContext, useState } from 'react';
+import Swal from "sweetalert2";
 
 export const cartContext = createContext();
 
@@ -27,12 +28,29 @@ export default function CartProvider ({ children }) {
     }
     
     function clear () {
-      setCarrito([]);
+      Swal.fire({
+        title: '¿Quieres borrar la compra?',
+        text: "No podras revertir esto!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: "No",
+        confirmButtonText: 'Si, borrar!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Borrado!',
+            'Su compra ha sido borrada.',
+            'success'
+            )
+            setCarrito([]);
+        }
+      })
     }
 
+    const totalPrecio = () => carrito.reduce((acc, item) => acc + item.cantidad * item.precio, 0 ).toFixed(3);
 
-    const totalPrecio = () => carrito.reduce((acc, item) => acc + item.cantidad * item.precio, 0 );
-    
     
     return (
     <cartContext.Provider value={{carrito, addItem, removeItem, clear, totalPrecio}}>
