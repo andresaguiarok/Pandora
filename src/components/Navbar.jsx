@@ -1,16 +1,22 @@
-import React from "react";
-
+import React, { useContext, useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-
 import { Link } from "react-router-dom";
 import Logo from "../images/pandora.png";
+import { cartContext } from "./CartContext";
 import CarWidget from "./CarWidget";
 import "./styles/navbar.css";
 
 function Navegador() {
+  const { carrito } = useContext(cartContext);
+  const [cantidad, setCantidad] = useState(0);
+  useEffect(() => {
+    setCantidad(carrito.length);
+    /*setCantidad(carrito.reduce((acc,item) => acc + item.cantidad,0));*/
+  }, [carrito])
+  
   return (
     <Navbar expand="lg" variant="dark" style={{backgroundColor: "#0b0b0b", width:"100%"}} >
       <Container fluid>
@@ -28,7 +34,7 @@ function Navegador() {
               <Link className="nav-item dropdown dropdown-item" to={`/categoria/Cadena`}>Cadenas</Link>
             </NavDropdown>
             <Link className="nav-link" to={`/contacto`}>Contacto</Link>
-            <CarWidget />
+            <Link className="nav-item dropdown dropdown-item" to={`Cart`} ><CarWidget cantidad={cantidad}/></Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

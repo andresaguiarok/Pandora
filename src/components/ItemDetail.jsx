@@ -1,23 +1,34 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Card, Container } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
 import Table from 'react-bootstrap/Table';
 import { Link } from 'react-router-dom';
+import { cartContext } from "./CartContext";
 import ItemCount from "./ItemCount.jsx";
 import "./styles/contenedor.css";
 
 export default  function ItemDetail({ producto }) {
   const [bolsa, setBolsa] = useState(false);
 
-  const onAdd  = ()=>{
-    console.log("se agrego un producto");
+  const {carrito, addItem} = useContext(cartContext);
+  console.log(carrito);
+
+  const onAdd  = (cantidad) => {
+    console.log(`se agrego ${cantidad} unidades de ${producto.nombre} `);
+    addItem(producto, cantidad)
     setBolsa(true)
   }
 
-  
-
+  let descripcionItem = [
+    {label: "Marca :", itemDescripcion: producto?.descripcion?.[0]},
+    {label: "Material :", itemDescripcion: producto?.descripcion?.[1]},
+    {label: "Pureza :", itemDescripcion: producto?.descripcion?.[2]},
+    {label: "Modelo :", itemDescripcion: producto?.descripcion?.[3]},
+    {label: "Piedras :", itemDescripcion: producto?.descripcion?.[4]},
+    {label: "Edad :", itemDescripcion: producto?.descripcion?.[5]},
+  ]
 
   return (
     <Container className="text-center cardDetail">
@@ -55,46 +66,28 @@ export default  function ItemDetail({ producto }) {
                   Disponible: ({producto.stock} unidades)
                 </Card.Body>
                 <Card.Body>
-                {bolsa 
-                ? <div className="contenedorDireccion">
-                  <Link className="btn btn-dark" to="/Cart" >Terminar compra</Link>
-                  <Link className="btn btn-info text-white" to="/">Seguir comprando</Link>
-                </div>
-                : <ItemCount initial={1} stock={producto.stock} onAdd={onAdd} /> }
+                  {bolsa 
+                  ? <div className="contenedorDireccion">
+                    <Link className="btn btn-dark" to="/Cart" >Terminar compra</Link>
+                    <Link className="btn btn-info text-white" to="/">Seguir comprando</Link>
+                  </div>
+                  : <ItemCount initial={1} stock={producto.stock} onAdd={onAdd} /> }
                 </Card.Body>
-              <Card.Title className="mt-3">
-                <u className="h5">Caracteristicas:</u> 
-              </Card.Title>
-              <Card.Body className="mt-3">
-                <Table striped bordered responsive="md">
-                  <tbody>
-                    <tr>
-                      <td>Marca :</td>
-                      <td> {producto.descripcion[0]}  </td>
-                    </tr>
-                    <tr>
-                      <td>Material :</td>
-                      <td> {producto.descripcion[1]} </td>
-                    </tr>
-                    <tr>
-                      <td>Pureza</td>
-                      <td> {producto.descripcion[2]} </td>
-                    </tr>
-                    <tr>
-                      <td>Modelo :</td>
-                      <td> {producto.descripcion[3]} </td>
-                    </tr>
-                    <tr>
-                      <td>Piedras :</td>
-                      <td> {producto.descripcion[4]} </td>
-                    </tr>
-                    <tr>
-                      <td>Edad :</td>
-                      <td> {producto.descripcion[5]} </td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </Card.Body>             
+                <Card.Title className="mt-3">
+                  <u className="h5">Caracteristicas:</u> 
+                </Card.Title>
+                <Card.Body className="mt-3">
+                  <Table striped bordered responsive="md">
+                    <tbody>
+                      {descripcionItem.map((item) => (
+                        <tr>
+                          <td> {item.label} </td>
+                          <td> {item.itemDescripcion} </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </Table>
+                </Card.Body>             
               </Card.Body>
             </Col>
           </Row> 
