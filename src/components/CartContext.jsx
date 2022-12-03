@@ -24,6 +24,14 @@ export default function CartProvider ({ children }) {
     }
     
     function removeItem (itemId) {
+      Swal.fire({
+        position: 'top-end',
+        width: "20rem",
+        icon: 'success',
+        title: 'Se elimino el producto',
+        showConfirmButton: false,
+        timer: 1500
+      })      
       setCarrito(carrito.filter((item) => item.id !== itemId))
     }
     

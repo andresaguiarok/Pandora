@@ -43,14 +43,14 @@ function Cart() {
             })}    
             <tr>
               <th colSpan={2}>PRECIO TOTAL:</th>
-              <th colSpan={2}> {totalPrecio()} </th>
+              <th colSpan={2}> $ {totalPrecio()} </th>
             </tr>
             <tr>
               <th colSpan={2}>
                 <Button variant="danger" onClick={() => clear() } >Eliminar compra</Button>
               </th>
               <th colSpan={2}>
-              <Button variant="secondary" >Finalizar compra</Button>
+              <Link className='btn btn-secondary' to={`/checkout`}>Finalizar compra</Link>
               </th>
             </tr> 
           </tbody>

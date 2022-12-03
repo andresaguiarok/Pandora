@@ -46,7 +46,7 @@ export default  function ItemDetail({ producto }) {
           <Row>
             <Col sm={6}>
               <Row>
-                <Card.Img variant="top" src={producto.imgUrl}  className="img-fluid" />
+                <Card.Img variant="top" src={producto.imgUrl} style={{width:"100%", height:"24rem"}}/>
               </Row>
               <Row className="mt-3">
                 <Card.Text className='h4'>$ {producto.precio} </Card.Text>
