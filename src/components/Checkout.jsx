@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import { cartContext } from "./CartContext";
 import "./styles/carrito.css";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import Swal from "sweetalert2";
 
 function Checkout() {
 
@@ -33,12 +34,23 @@ function Checkout() {
         addDoc(pedidos, pedido).then((pedidoRealizado) => {
             console.log(pedidoRealizado.id);
         });
+        let timerInterval
+        Swal.fire({
+            title: 'Procesando tus datos...',
+            timer: 5000,
+            timerProgressBar: true,
+            didOpen: () => {
+              Swal.showLoading()
+            },
+            willClose: () => {
+              clearInterval(timerInterval)
+            }
+        })
     }
 
   return (
-    <Container fluid className="p-2 contenedorTodo">
-        <Container className="p-4">
-            <Form>
+    <Container fluid className="p-2 contenedorTodo">           
+        <Form className="p-4">
                 <Row className="mb-3">
                     <Form.Group as={Col}>
                       <Form.Label>Nombre :</Form.Label>
@@ -77,9 +89,7 @@ function Checkout() {
                       <Form.Control />
                     </Form.Group>
                 </Row>
-            </Form>
-        </Container>
-        <Container>
+        </Form>
         <Table striped bordered responsive="xs" className='text-center tablaBorder' variant="dark">
         <thead>
             <tr>
@@ -112,8 +122,7 @@ function Checkout() {
               <th colSpan={2}> $ {totalPrecio()} </th>
             </tr>
           </tbody>
-        </Table>
-        </Container>
+        </Table>   
         <Container className="text-center">
             <Button variant="dark" type="button" onClick={comprar} value="Comprar!!">Realizar pedido</Button>
         </Container>

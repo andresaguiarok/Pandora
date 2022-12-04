@@ -1,11 +1,11 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import Swal from "sweetalert2";
 
 export const cartContext = createContext();
 
 export default function CartProvider ({ children }) {
 
-    const [carrito , setCarrito] = useState([]);
+    const [carrito , setCarrito] = useState(JSON.parse(localStorage.getItem("carrito")) || []);
     
     function isInCart (itemId) {
       const hay = carrito.findIndex((item) => item.id === itemId)
@@ -55,11 +55,15 @@ export default function CartProvider ({ children }) {
             setCarrito([]);
         }
       })
-    }
+    };
 
     const totalPrecio = () => carrito.reduce((acc, item) => acc + item.cantidad * item.precio, 0 ).toFixed(3);
 
+    useEffect(() => {
+      localStorage.setItem("carrito", JSON.stringify(carrito))
+    }, [carrito]);
     
+
     return (
     <cartContext.Provider value={{carrito, addItem, removeItem, clear, totalPrecio}}>
         {children}
