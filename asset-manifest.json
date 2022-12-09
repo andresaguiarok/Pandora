@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e291e1f.css",
-    "main.js": "/static/js/main.c9c98876.js",
+    "main.css": "/static/css/main.d08db0a5.css",
+    "main.js": "/static/js/main.36e6a55b.js",
     "static/js/787.03a6315d.chunk.js": "/static/js/787.03a6315d.chunk.js",
     "static/media/fondo-slime1.jpg": "/static/media/fondo-slime1.caa4bd8c97fdd3e5feb8.jpg",
     "static/media/empty_cart.png": "/static/media/empty_cart.910c2458ba7e1256cb14.png",
+    "static/media/gracias-por-tu-compra.png": "/static/media/gracias-por-tu-compra.6b21612ab9044c8b4b56.png",
     "index.html": "/index.html",
-    "main.5e291e1f.css.map": "/static/css/main.5e291e1f.css.map",
-    "main.c9c98876.js.map": "/static/js/main.c9c98876.js.map",
+    "main.d08db0a5.css.map": "/static/css/main.d08db0a5.css.map",
+    "main.36e6a55b.js.map": "/static/js/main.36e6a55b.js.map",
     "787.03a6315d.chunk.js.map": "/static/js/787.03a6315d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e291e1f.css",
-    "static/js/main.c9c98876.js"
+    "static/css/main.d08db0a5.css",
+    "static/js/main.36e6a55b.js"
   ]
 }
