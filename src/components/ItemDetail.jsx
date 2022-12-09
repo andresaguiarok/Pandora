@@ -13,8 +13,8 @@ import Swal from "sweetalert2";
 export default  function ItemDetail({ producto }) {
   const [bolsa, setBolsa] = useState(false);
 
-  const {carrito, addItem} = useContext(cartContext);
-  console.log(carrito);
+  const { addItem } = useContext(cartContext);
+
   const onAdd  = (cantidad) => {
     Swal.fire({
       position: 'top',

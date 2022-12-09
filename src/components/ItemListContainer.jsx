@@ -36,6 +36,7 @@ function ItemListContainer (){
             backgroundSize: "cover",
             color: "white"}}>
 
+
             <div className="text-center">
                 <ItemList items={prod} idcategoria={idcategoria} />  
             </div>

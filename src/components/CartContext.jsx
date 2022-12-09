@@ -57,7 +57,13 @@ export default function CartProvider ({ children }) {
       })
     };
 
+    function borrarCarrito (){
+      setCarrito([]);
+    }
+
     const totalPrecio = () => carrito.reduce((acc, item) => acc + item.cantidad * item.precio, 0 ).toFixed(3);
+
+    
 
     useEffect(() => {
       localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -65,7 +71,7 @@ export default function CartProvider ({ children }) {
     
 
     return (
-    <cartContext.Provider value={{carrito, addItem, removeItem, clear, totalPrecio}}>
+    <cartContext.Provider value={{carrito, addItem, removeItem, clear, totalPrecio, borrarCarrito}}>
         {children}
     </cartContext.Provider>
   );

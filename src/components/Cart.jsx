@@ -12,7 +12,7 @@ function Cart() {
   return (
     <Container fluid className="p-2 contenedorTodo">
       {carrito.length ? (
-        <Table striped bordered responsive="xs" className='text-center tablaBorder' variant="dark">
+        <Table striped bordered responsive="xs" className='text-center mt-3' variant="dark">
           <thead>
             <tr>
               <th>PRODUCTO</th>

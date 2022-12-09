@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import "./styles/footer.css";
+import PandoraLogo from "../images/pandora.png";
 
 export default function Footer(){
     return (
@@ -10,7 +11,7 @@ export default function Footer(){
             height:"auto"}} >
                 
             <div className="text-center p-2">
-                <h1>Pandora®</h1> 
+                <img src={PandoraLogo} />
                 <p>2022 © Pandora</p>
             </div>               
         </Container>
