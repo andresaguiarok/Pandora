@@ -1,23 +1,26 @@
 # Pandora
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto de un e-commerce se realizo durante dos meses en el curso React.Js en Coderhouse donde esta conectado a firebase/firestore
 
-## Available Scripts
+## Descripcion
 
-In the project directory, you can run:
+Es un e-commerce de una joyeria. 
+Desde la vista de la home se puede ver todos los productos donde se muestran con su respectiva imagen, precio,nombre, categoria y metal.
+Tambien se puede navegar entre sus 4 categorias que son : Anillos , Aros, Pulseras y Cadenas.
+Se puede acceder a cada productos donde muestra los detalles de cada producto.
+Tiene un carrito donde se acumulan los productos para efectuar la compra
+Tambien cuenta con un Checkout que contiene un formulario y una vista de los productos que quiere comprar el usuario donde tiene que completar todos los campos como: nombre, apellido, email, direccion, etc...
+A donde el usuario clickeara un boton donde dice finalizar pedido y se le creara un recibo del pedido.
 
-### `npm start`
+### `Firesbase/Firestore`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Firestore tiene colecciones creadas como: productos y pedidos.
+Tambien se uso para deployar el proyecto creado. 
+Ver en linea: https://pandora-luxury.web.app/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Boostrap react`
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Se uso la libreria de `boostrap react` para darle estilos a los componentes como las cards , el formulario y una tabla para visualizar mejor los articulos en el componente `Cart.jsx`.
 
 ### `npm run build`
 
