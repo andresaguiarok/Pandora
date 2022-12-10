@@ -9,8 +9,9 @@ Desde la vista de la home se puede ver todos los productos donde se muestran con
 Tambien se puede navegar entre sus 4 categorias que son : Anillos , Aros, Pulseras y Cadenas.\
 Se puede acceder a cada productos donde muestra los detalles de cada producto.\
 Tiene un carrito donde se acumulan los productos para efectuar la compra.\
+Tiene un icono `Bag` donde se muestran cuantos productos tiene al clickear ahi te lleva al carrito.\
 Tambien cuenta con un Checkout que contiene un formulario y una vista de los productos que quiere comprar el usuario donde tiene que completar todos los campos como: nombre, apellido, email, direccion, etc...
-A donde el usuario clickeara un boton donde dice finalizar pedido y se le creara un recibo del pedido.\
+A donde el usuario clickeara un boton donde dice finalizar pedido y se le creara un comprobante del pedido.\
 
 ### `Firesbase/Firestore`
 
@@ -22,52 +23,24 @@ Ver en linea: https://pandora-luxury.web.app/
 
 Se uso la libreria de `boostrap react` para darle estilos a los componentes como las cards , el formulario y una tabla para visualizar mejor los articulos en el componente `Cart.jsx`.
 
-### `npm run build`
+### `Para el uso de este repositorio`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Primero antes todo descargar e instalar `Node.js`.\
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para su uso hay que instalar las siguientes librerias.\
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1 - `React js`.\
+2 - `Boostrap React`.\
+3 - `Boostrap Icon`.\
+4 - `React Router Dom`.\
+5 - `Sweet Alert`.\
+6 - `Firebase`.\
 
-### `npm run eject`
+### `Para ejecutar la app`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Nota: Para ejecutar esta app de manera local debes hacer `npm start`**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Si generas cambios y estas listo para modificar el proyecto debes hacer:\ 
+Primero `npm build` ya que tiene una carpeta build donde se almacenara los cambios y sera modificada.\
+Y luego hacer `firebase deploy` para que los cambios se suban y se vean en linea.\
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
