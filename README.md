@@ -1,21 +1,21 @@
 # Pandora
 
-Este proyecto de un e-commerce se realizo durante dos meses en el curso React.Js en Coderhouse donde esta conectado a firebase/firestore
+Este proyecto de un e-commerce se realizo durante dos meses en el curso React.Js en Coderhouse donde esta conectado a firebase/firestore.
 
 ## Descripcion
 
-Es un e-commerce de una joyeria. 
-Desde la vista de la home se puede ver todos los productos donde se muestran con su respectiva imagen, precio,nombre, categoria y metal.
-Tambien se puede navegar entre sus 4 categorias que son : Anillos , Aros, Pulseras y Cadenas.
-Se puede acceder a cada productos donde muestra los detalles de cada producto.
-Tiene un carrito donde se acumulan los productos para efectuar la compra
+Es un e-commerce de una joyeria.\
+Desde la vista de la home se puede ver todos los productos donde se muestran con su respectiva imagen, precio,nombre, categoria y metal.\
+Tambien se puede navegar entre sus 4 categorias que son : Anillos , Aros, Pulseras y Cadenas.\
+Se puede acceder a cada productos donde muestra los detalles de cada producto.\
+Tiene un carrito donde se acumulan los productos para efectuar la compra.\
 Tambien cuenta con un Checkout que contiene un formulario y una vista de los productos que quiere comprar el usuario donde tiene que completar todos los campos como: nombre, apellido, email, direccion, etc...
-A donde el usuario clickeara un boton donde dice finalizar pedido y se le creara un recibo del pedido.
+A donde el usuario clickeara un boton donde dice finalizar pedido y se le creara un recibo del pedido.\
 
 ### `Firesbase/Firestore`
 
-Firestore tiene colecciones creadas como: productos y pedidos.
-Tambien se uso para deployar el proyecto creado. 
+Firestore tiene colecciones creadas como: productos y pedidos.\
+Tambien se uso para deployar el proyecto creado.\
 Ver en linea: https://pandora-luxury.web.app/
 
 ### `Boostrap react`
