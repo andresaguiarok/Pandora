@@ -7,7 +7,7 @@ import "./styles/contenedor.css";
 function ItemList ({ items }) {
     
     return (
-        <Container className="cardDetail" >        
+        <Container>        
             {items.length ? (
                 <div className="contenedorCard">
                 {items.map((item) => {             
@@ -19,8 +19,10 @@ function ItemList ({ items }) {
                 })}
                 </div>
             ) : (
-                <div className="contenedorLoad">
-                    <Spinner animation="border" variant="secondary" className="load" />
+                <div className="cardDetail" >
+                    <div className="contenedorLoad">
+                        <Spinner animation="border" variant="secondary" className="load" />
+                    </div>
                 </div>
             )}    
         </Container>
