@@ -5,7 +5,7 @@ import "./styles/contenedor.css";
 
 export default function Item({ producto }) {
   return (
-    <Container className="m-3">
+    <Container className="m-3 text-center">
       <Card style={{ width: '18rem'}} className="estilosDeCards">
           <Card.Header> {`${producto.categoria} de ${producto.metal}`} </Card.Header>
           <Card.Img src= {producto.imgUrl} style={{height:"280px"}} />
