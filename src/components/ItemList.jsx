@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner';
 import Item from "./Item";
 import "./styles/contenedor.css";
@@ -7,9 +6,9 @@ import "./styles/contenedor.css";
 function ItemList ({ items }) {
     
     return (
-        <Container>        
+        <div className="contenedorCard">        
             {items.length ? (
-                <div className="contenedorCard">
+                <div className="cardDetail">
                 {items.map((item) => {             
                     return (
                         <div key={item.id}>
@@ -25,7 +24,7 @@ function ItemList ({ items }) {
                     </div>
                 </div>
             )}    
-        </Container>
+        </div>
     );
 }
 
