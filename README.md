@@ -38,8 +38,9 @@ Para su uso hay que instalar las siguientes librerias.
 
 ### `Para ejecutar la app`
 
-Si generas cambios y estas listo para modificar el proyecto debes hacer.\ 
+**Nota: Para ejecutar esta app de manera local debes hacer `npm start`**
+
+Si generas cambios y estas listo para modificar el proyecto debes hacer.git 
 1 - Tenes que hacer `npm build` ya que tiene una carpeta build donde se almacenara los cambios y sera modificada.\
 2 - Y luego hacer `firebase deploy` para que los cambios se suban y se vean en linea.
 
-**Nota: Para ejecutar esta app de manera local debes hacer `npm start`**
