@@ -11,7 +11,7 @@ Se puede acceder a cada productos donde muestra los detalles de cada producto.\
 Tiene un carrito donde se acumulan los productos para efectuar la compra.\
 Tiene un icono `Bag` donde se muestran cuantos productos tiene al clickear ahi te lleva al carrito.\
 Tambien cuenta con un Checkout que contiene un formulario y una vista de los productos que quiere comprar el usuario donde tiene que completar todos los campos como: nombre, apellido, email, direccion, etc...
-A donde el usuario clickeara un boton donde dice finalizar pedido y se le creara un comprobante del pedido.\
+A donde el usuario clickeara un boton donde dice finalizar pedido y se le creara un comprobante del pedido.
 
 ### `Firesbase/Firestore`
 
@@ -25,22 +25,22 @@ Se uso la libreria de `boostrap react` para darle estilos a los componentes como
 
 ### `Para el uso de este repositorio`
 
-Primero antes todo descargar e instalar `Node.js`.\
+Primero antes todo descargar e instalar `Node.js`.
 
-Para su uso hay que instalar las siguientes librerias.\
+Para su uso hay que instalar las siguientes librerias.
 
-1 - `React js`.\
-2 - `Boostrap React`.\
-3 - `Boostrap Icon`.\
-4 - `React Router Dom`.\
-5 - `Sweet Alert`.\
-6 - `Firebase`.\
+1 - `React js`
+2 - `Boostrap React`
+3 - `Boostrap Icon`
+4 - `React Router Dom`
+5 - `Sweet Alert`
+6 - `Firebase`
 
 ### `Para ejecutar la app`
 
 **Nota: Para ejecutar esta app de manera local debes hacer `npm start`**
 
-Si generas cambios y estas listo para modificar el proyecto debes hacer:\ 
-Primero `npm build` ya que tiene una carpeta build donde se almacenara los cambios y sera modificada.\
-Y luego hacer `firebase deploy` para que los cambios se suban y se vean en linea.\
+Si generas cambios y estas listo para modificar el proyecto debes hacer: 
+1 - Tenes que hacer `npm build` ya que tiene una carpeta build donde se almacenara los cambios y sera modificada.\
+2 - Y luego hacer `firebase deploy` para que los cambios se suban y se vean en linea.
 
