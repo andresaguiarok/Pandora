@@ -29,12 +29,12 @@ Primero antes todo descargar e instalar `Node.js`.
 
 Para su uso hay que instalar las siguientes librerias.
 
-1 - `React js`
-2 - `Boostrap React`
-3 - `Boostrap Icon`
-4 - `React Router Dom`
-5 - `Sweet Alert`
-6 - `Firebase`
+1 - `React js`\
+2 - `Boostrap React`\
+3 - `Boostrap Icon`\
+4 - `React Router Dom`\
+5 - `Sweet Alert`\
+6 - `Firebase`\
 
 ### `Para ejecutar la app`
 
